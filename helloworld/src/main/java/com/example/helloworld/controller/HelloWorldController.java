@@ -1,0 +1,41 @@
+package com.example.helloworld.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/hello-world")
+public class HelloWorldController {
+
+
+	@GetMapping("/1")
+	public String helloWorld() {
+		return "Hello, world.";
+	}
+	
+	@GetMapping("/2")
+	public List<String> getListaBSMGen(){
+		return Arrays.asList(
+				"Mentalidade de crscimento",
+				"Orientação ao futuro",
+				"Responsabilidade pessoal",
+				"Persistência",
+				"Trabalho em equipe",
+				"Comunidade",
+				"Proatividade",
+				"Orientação aos detalhes");
+	}
+	
+	@GetMapping("/3")
+	public List<String> getListaAprendizagem(){
+		return Arrays.asList(
+				"Spring Boot",
+				"Modelagem de software",
+				"Boas práticas de desenvolvimento de software");
+	}
+	
+}
